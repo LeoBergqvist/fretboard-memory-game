@@ -1,0 +1,127 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  /* text-align: center; */
+
+  --color-primary: #4389C1;
+  --color-secondary: #52B4C0;
+  --color-tertiary: #89E5F0;
+  --color-accent: #CDE2FA;
+
+  --color-bg: #163019;
+  --color-course: #D9D9D9;
+
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #000000;
+
+
+
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* src/index.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  background: #111;
+  color: white;
+  font-size: xx-large;
+}
+
+.navbar ul {
+  padding: 0;
+  padding-left: 12px;
+}
+
+/* .navbar li:hover {
+  color: #89E5F0;
+
+} */
+
+.logo {
+  font-size: 1.25rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid white;
+}
+
+.nav-links a:hover {
+  color: #89E5F0;
+  text-shadow: 1px 1px 1px var(--color-bg);
+}
+
+
+
+.welcome {
+  margin-left: 12px;
+}
+
+.course {
+  display: flex;
+}
+
+.course-button {
+  background-color: var(--color-course);
+  color: var(--color-bg);
+  border-radius: 68px;
+  width: 400px;
+  height: 300px;
+  box-shadow: 7px 10px 7px var(--color-primary);
+  margin-right: 59px;
+}
+
+.course-button:hover {
+  background-color: var(--color-secondary);
+}
