@@ -100,6 +100,7 @@
 .nav-links a:hover {
   color: #89E5F0;
   text-shadow: 1px 1px 1px var(--color-bg);
+  border-bottom: 2px solid var(--color-tertiary);
 }
 
 
@@ -114,14 +115,74 @@
 
 .course-button {
   background-color: var(--color-course);
-  color: var(--color-bg);
+  /* color: var(--color-bg); */
   border-radius: 68px;
   width: 400px;
   height: 300px;
   box-shadow: 7px 10px 7px var(--color-primary);
   margin-right: 59px;
+  display: flex;
+  justify-content: center;
+  /* horizontal */
+  align-items: center;
+  /* vertical */
+  /* font-size: 3.0rem;
+  line-height: 1.1; */
+}
+
+
+.course-button a {
+  color: var(--color-bg);
+  /* font-size: 3.0rem; */
+  line-height: 1.1;
+  text-align: center;
+
 }
 
 .course-button:hover {
   background-color: var(--color-secondary);
+}
+
+.course-container {
+  display: flex;
+}
+
+.course-container-description {
+  background-color: rgba(0, 0, 0, 0.26);
+  border-radius: 34px;
+  padding: 15px;
+}
+
+.course-start-button {
+  background: var(--color-secondary);
+  width: 400px;
+  height: 85px;
+  margin-right: 58px;
+  margin-top: 40px;
+  border-radius: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-start-button a {
+  color: var(--color-bg);
+  text-align: center;
+}
+
+.course-level-button {
+  background: var(--color-course);
+  width: 300px;
+  height: 60px;
+  margin-right: 58px;
+  margin-top: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-level-button a {
+  text-align: center;
+  color: var(--color-bg);
 }

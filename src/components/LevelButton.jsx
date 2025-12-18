@@ -1,17 +1,13 @@
 import { Link } from "react-router-dom";
 
-export default function CourseButton({ title, to }) {
-
-
+export default function LevelButton({ title, to }) {
     return (
-        <div className="course-button">
-            <Link to={to} >
+        <div class="course-level-button">
+            <Link to={to}>
                 <h1>
                     {title}
                 </h1>
-
-
             </Link>
-        </div>
+        </div >
     );
 }
