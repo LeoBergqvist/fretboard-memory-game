@@ -4,6 +4,7 @@ import Courses from "../components/Courses";
 import Navbar from "../components/Navbar";
 import CourseStartButton from "../components/CourseStartButton";
 import LevelButton from "../components/LevelButton";
+import CourseLevels from "../components/CourseLevels";
 
 export default function StudyFretboard() {
     return (
@@ -16,11 +17,8 @@ export default function StudyFretboard() {
             </div>
             <div className="course-container">
                 <div>
-                    <CourseStartButton />
-                    <LevelButton title="0" />
-                    <LevelButton title="3" />
-                    <LevelButton title="5" />
-                    <LevelButton title="7" />
+                    {/* <CourseStartButton /> */}
+                    <CourseLevels />
                 </div>
                 <CourseDescription description={"Learn mnemonics for each string in positions 0, 3, 5, 7, 10"} />
             </div>

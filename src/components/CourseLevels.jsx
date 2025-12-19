@@ -1,13 +1,30 @@
-export default CourseLevels function () {
+import { useState } from "react";
+import LevelButton from "../components/LevelButton";
+import CourseStartButton from "../components/CourseStartButton";
+
+const levels = [
+    { title: "0", route: "/levels/0" },
+    { title: "3", route: "/levels/3" },
+    { title: "5", route: "/levels/5" },
+    { title: "7", route: "/levels/7" },
+];
+
+export default function CourseLevels() {
+    const [activeRoute, setActiveRoute] = useState(null);
+
     return (
-        <div>
-            <ul>
-                <li>START</li>
-                <li>0</li>
-                <li>3</li>
-                <li>5</li>
-                <li>7</li>
-            </ul>
+        <div className="course-levels">
+            <CourseStartButton to={activeRoute} />
+            {levels.map((level) => (
+                <LevelButton
+                    key={level.title}
+                    title={level.title}
+                    to={level.route}
+                    active={activeRoute === level.route}
+                    setActiveRoute={setActiveRoute}
+                />
+            ))}
+
         </div>
     );
 }

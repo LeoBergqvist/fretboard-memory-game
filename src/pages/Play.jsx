@@ -1,10 +1,13 @@
+import Fretboard from "../components/Fretboard"
 import Navbar from "../components/Navbar"
+
 
 export default function About() {
     return (
         <>
             <Navbar />
             <h2>Play Page</h2>
+            <Fretboard />
         </>
 
     )
