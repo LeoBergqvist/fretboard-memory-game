@@ -1,4 +1,4 @@
-import Fretboard from "../components/Fretboard"
+import GuitarFretboard from "../components/GuitarFretboard"
 import Navbar from "../components/Navbar"
 
 
@@ -7,7 +7,7 @@ export default function About() {
         <>
             <Navbar />
             <h2>Play Page</h2>
-            <Fretboard />
+            <GuitarFretboard highlightFret={0} frets={15} />
         </>
 
     )

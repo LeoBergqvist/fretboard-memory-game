@@ -3,10 +3,10 @@ import LevelButton from "../components/LevelButton";
 import CourseStartButton from "../components/CourseStartButton";
 
 const levels = [
-    { title: "0", route: "/levels/0" },
-    { title: "3", route: "/levels/3" },
-    { title: "5", route: "/levels/5" },
-    { title: "7", route: "/levels/7" },
+    { title: "0", route: "/study/level/0" },
+    { title: "3", route: "/study/level/3" },
+    { title: "5", route: "/study/level/5" },
+    { title: "7", route: "/study/level/7" },
 ];
 
 export default function CourseLevels() {

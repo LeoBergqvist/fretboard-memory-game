@@ -221,108 +221,88 @@
   color: var(--color-bg);
 }
 
+/* GuitarFretboard.css */
+
+
+.fretboard-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+
 .fretboard {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  border-left: 4px solid #333;
-  /* nut */
-  padding-left: 4px;
-  background: #deb887;
-  /* fretboard wood */
-  padding: 10px;
+  display: inline-block;
+  background: #D9D9D9;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .string-row {
   display: flex;
+  align-items: center;
+  margin-bottom: 0px;
 }
+
+
+.string-label {
+  width: 24px;
+  margin-right: 8px;
+  text-align: right;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+
+.frets {
+  display: flex;
+}
+
 
 .fret {
   position: relative;
-  width: 50px;
-  height: 40px;
-  border-right: 2px solid #999;
+  height: 32px;
+  width: 56px;
+  background: #534E4E;
+  border-right: 1px solid #999;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  background-color: #f7f3e9;
-  /* fret surface */
 }
 
-.fret.active {
-  background-color: #2ecc71;
-  color: white;
+
+.fret.nut {
+  width: 28px;
+  background: #4a3527;
+  border-right: 4px solid #ddd;
 }
 
-.fret:hover {
-  background-color: #3498db;
-  color: white;
-}
 
-.open-string-label {
+.string-line {
   position: absolute;
-  left: -25px;
-  font-weight: bold;
-  color: #333;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #000;
+  opacity: 0.7;
 }
 
-.note-name {
-  font-size: 12px;
-  position: absolute;
-  bottom: 2px;
-  text-align: center;
-  width: 100%;
-  color: #555;
-}
 
-/* Dots */
 .fret-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #333;
-  border-radius: 50%;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #000;
+  opacity: 0.85;
 }
 
-.fret-dot.top {
-  top: 8px;
+.fret.highlight {
+  background: #c97c2b;
 }
 
-.fret-dot.bottom {
-  bottom: 8px;
+.fret.highlight .string-line {
+  background: #fff;
+  height: 3px;
 }
-
-/* Strings thicker like a guitar */
-.string-row:nth-child(1) .fret {
-  border-bottom: 4px solid #555;
-}
-
-/* E */
-.string-row:nth-child(2) .fret {
-  border-bottom: 3.5px solid #555;
-}
-
-/* A */
-.string-row:nth-child(3) .fret {
-  border-bottom: 3px solid #555;
-}
-
-/* D */
-.string-row:nth-child(4) .fret {
-  border-bottom: 2.5px solid #555;
-}
-
-/* G */
-.string-row:nth-child(5) .fret {
-  border-bottom: 2px solid #555;
-}
-
-/* B */
-.string-row:nth-child(6) .fret {
-  border-bottom: 1.5px solid #555;
-}
-
-/* e */
