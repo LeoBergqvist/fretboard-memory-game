@@ -14,9 +14,6 @@
 
   --color-text-primary: #FFFFFF;
   --color-text-secondary: #000000;
-
-
-
 }
 
 .logo {
@@ -223,3 +220,109 @@
   text-align: center;
   color: var(--color-bg);
 }
+
+.fretboard {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-left: 4px solid #333;
+  /* nut */
+  padding-left: 4px;
+  background: #deb887;
+  /* fretboard wood */
+  padding: 10px;
+}
+
+.string-row {
+  display: flex;
+}
+
+.fret {
+  position: relative;
+  width: 50px;
+  height: 40px;
+  border-right: 2px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #f7f3e9;
+  /* fret surface */
+}
+
+.fret.active {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.fret:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+.open-string-label {
+  position: absolute;
+  left: -25px;
+  font-weight: bold;
+  color: #333;
+}
+
+.note-name {
+  font-size: 12px;
+  position: absolute;
+  bottom: 2px;
+  text-align: center;
+  width: 100%;
+  color: #555;
+}
+
+/* Dots */
+.fret-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fret-dot.top {
+  top: 8px;
+}
+
+.fret-dot.bottom {
+  bottom: 8px;
+}
+
+/* Strings thicker like a guitar */
+.string-row:nth-child(1) .fret {
+  border-bottom: 4px solid #555;
+}
+
+/* E */
+.string-row:nth-child(2) .fret {
+  border-bottom: 3.5px solid #555;
+}
+
+/* A */
+.string-row:nth-child(3) .fret {
+  border-bottom: 3px solid #555;
+}
+
+/* D */
+.string-row:nth-child(4) .fret {
+  border-bottom: 2.5px solid #555;
+}
+
+/* G */
+.string-row:nth-child(5) .fret {
+  border-bottom: 2px solid #555;
+}
+
+/* B */
+.string-row:nth-child(6) .fret {
+  border-bottom: 1.5px solid #555;
+}
+
+/* e */
