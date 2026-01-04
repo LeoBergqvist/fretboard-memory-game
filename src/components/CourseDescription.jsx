@@ -1,11 +1,17 @@
-export default function CourseDescription({ description }) {
+import React from 'react';
+
+export default function CourseDescription({ headline, description }) {
     return (
         <div className="course-container-description">
-            <h1>
-                Description:
-            </h1>
+            <h1>{headline}</h1>
+
             <p>
-                {description}
+                {description.split('\n').map((line, i) => (
+                    <React.Fragment key={i}>
+                        {line}
+                        <br />
+                    </React.Fragment>
+                ))}
             </p>
         </div>
     );

@@ -2,19 +2,14 @@ import CourseButton from "./CourseButton";
 
 export default function Courses() {
     return (
-        <div className="course">
+        <div className="courses">
             <CourseButton
                 title="Fretboard Mnemonics"
                 to="/study/fretboard"
             />
 
             <CourseButton
-                title="Scales"
-                to="/study/fretboard"
-            />
-
-            <CourseButton
-                title="Chords"
+                title="Groupings"
                 to="/study/fretboard"
             />
         </div>

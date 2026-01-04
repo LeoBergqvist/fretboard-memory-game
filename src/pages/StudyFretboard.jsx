@@ -10,17 +10,16 @@ export default function StudyFretboard() {
     return (
         <>
             <Navbar />
-            <h2>Fretboard</h2>
             <div className="course-container">
-                <CourseButton title={"Fretboard"} to={"/study/"} />
-                <CourseDescription description={"Learn mnemonics for each string in positions 0, 3, 5, 7, 10"} />
+                <CourseButton title={"Fretboard Mnemonics"} to={"/study/"} />
+                <CourseDescription headline={"Description:"} description={"Learn mnemonics for each string in positions 0, 3, 5, 7, 10"} />
             </div>
             <div className="course-container">
                 <div>
                     {/* <CourseStartButton /> */}
                     <CourseLevels />
                 </div>
-                <CourseDescription description={"Learn mnemonics for each string in positions 0, 3, 5, 7, 10"} />
+                <CourseDescription headline={"Last attempts:"} description={"Score / Date"} />
             </div>
         </>
     )

@@ -9,8 +9,6 @@ export default function CourseButton({ title, to }) {
                 <h1>
                     {title}
                 </h1>
-
-
             </Link>
         </div>
     );

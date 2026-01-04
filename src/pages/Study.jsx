@@ -5,7 +5,6 @@ export default function Study() {
     return (
         <>
             <Navbar />
-            <h2>Study Page</h2>
             <Courses />
         </>
     )
