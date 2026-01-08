@@ -1,16 +1,16 @@
 import { useState } from "react";
 import LevelButton from "../components/LevelButton";
 import CourseStartButton from "../components/CourseStartButton";
-import { levels } from "../data/levels"
+import { levelsPractice } from "../data/levels"
 
 
-export default function CourseLevels() {
+export default function PlayLevelsFrets() {
     const [activeRoute, setActiveRoute] = useState(null);
     const [activeFret, setActiveFret] = useState(null);
 
     return (
         <div className="course-levels">
-            {levels.map((level) => (
+            {levelsPractice.map((level) => (
                 <LevelButton
                     key={level.title}
                     title={level.title}

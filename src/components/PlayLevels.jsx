@@ -1,16 +1,16 @@
 import CourseButton from "./CourseButton";
 
-export default function Courses() {
+export default function PlayLevels() {
     return (
         <div className="courses">
             <CourseButton
                 title="Fretboard Mnemonics"
-                to="/study/fretboard"
+                to="/play/fretboard"
             />
 
             <CourseButton
                 title="Groupings"
-                to=""
+                to="/play/fretboard"
             />
         </div>
     );

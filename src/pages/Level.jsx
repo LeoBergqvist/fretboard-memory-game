@@ -4,34 +4,29 @@ import CourseDescription from "../components/CourseDescription";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import MnemonicDescription from "../components/mnemonicDescription";
+import { mnemonicsByFret } from "../data/mnemonics";
+import { getTexts } from '../functions/texts';
+import { getFretNotes } from "../functions/getFretNotes";
+// import { story } from "../assets/images/guitar.png"
+import MnemonicImage from "../components/MnemonicImage";
+// import { imagesFrets } from "../data/images";
+import { imagesStories } from "../data/images";
+import StoryImage from "../components/StoryImage";
+
 
 export default function Level() {
     const { levelId } = useParams();
     const level = Number(levelId);
+    const IndexesFretboardActive = [2, 3, 4,];
+    const IndexesImageActive = [4, 5]
+    // const image = imagesFrets[0];
 
-    const mnemonics = [
-        ["eddy!", "bye", "good-", "dynamite!", "ate", "eddy"]
-            .reverse()
-            .map(word => word.toUpperCase())
-            .join("\n ")
-    ];
+    const fretNotes = getFretNotes(level).join(", ");
+    const mnemonics = mnemonicsByFret[level]
+        .map(word => word.toUpperCase())
+        .join(" .. ");
 
-    const fretNotes = [
-        ["E", " A", " D", " G", " B", " E"]
-    ];
-
-    const texts = [
-        `Let's learn mnemonics for each string on \n fret "${level}"`,
-        `A "mnemonic" is a memory trick. We use words and images to remember the note names`,
-        `For example: On fret "${level}", the notes for each string are: \n
-        ${fretNotes[level]} \n (lowest- to highest string)`,
-        `We could use these letters to make a "memorable story"`,
-        `For the notes ("${fretNotes[level]}") \n  
-        We get: \n
-        ${mnemonics[0]}`,
-        `This creates a story.\n If we create visual images for it, our brains remember more easily`,
-        `To start practicing press the guitar 🎸`,
-    ];
+    const texts = getTexts({ level, fretNotes, mnemonics });
 
     const [index, setIndex] = useState(0);
 
@@ -53,7 +48,20 @@ export default function Level() {
                     onNext={next}
                     onBack={back}
                 />
-                <GuitarFretboard frets={level + 3} highlightFret={level} />
+                {/* <MnemonicImage image={image} /> */}
+                {
+                    IndexesFretboardActive.includes(index) && (<GuitarFretboard frets={level + 3} highlightFret={level} />)
+                }
+                {
+
+                    // IndexesImageActive.includes(index) && (
+                    //     <StoryImage index={level} alt="Fretboard story" />
+                    // )
+
+
+                }
+
+
             </div>
         </>
     );

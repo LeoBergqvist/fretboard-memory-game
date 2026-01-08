@@ -3,18 +3,16 @@ import Navbar from "../components/Navbar"
 import MnemonicImage from "../components/MnemonicImage"
 import Button from "../components/Button"
 import NoteButton from "../components/NoteButton"
+import Courses from "../components/Courses"
+import CourseLevels from "../components/CourseLevels"
+import PlayLevels from "../components/PlayLevels"
 
 export default function About() {
     return (
         <>
             <Navbar />
-            <h2>Play Page</h2>
-            <GuitarFretboard highlightFret={0} frets={15} />
-            {/* <MnemonicImage image="src\assets\images\dynamite.jpeg" />
-            <MnemonicImage image="src\assets\images\eddy.png" />
-            <MnemonicImage image="src\assets\images\ate.webp" /> */}
-            {/* <Button /> */}
-            <NoteButton note="C" />
+            <PlayLevels />
+            {/* <NoteButton note="C" /> */}
         </>
 
     )

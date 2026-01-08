@@ -5,12 +5,15 @@ export default function LevelButton({
     to,
     active,
     setActiveRoute,
+    setActiveFret
 }) {
     const handleClick = (e) => {
         if (!active) {
             e.preventDefault();     // first click: select only
             setActiveRoute(to);     // ✅ this enables Start button
+            setActiveFret(title);
         }
+
     };
 
     return (

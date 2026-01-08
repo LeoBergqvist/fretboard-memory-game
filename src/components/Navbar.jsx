@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
+import guitarImg from "../assets/images/guitar.png";
 
 export default function Navbar() {
     return (
         <nav className="navbar">
+            <img className="guitar-img" src={guitarImg} />
 
             <ul className='nav-links'>
-                {/* <img src="src\assets\images\guitar.png"></img> */}
                 <li>
                     <NavLink to="/" end>Home</NavLink>
                 </li>

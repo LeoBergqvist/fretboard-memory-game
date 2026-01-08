@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function CourseStartButton({ fret, to }) {
+export default function PlayStartButton({ to }) {
     if (!to) {
         return (
             <div className="course-start-button disabled">
@@ -10,9 +10,9 @@ export default function CourseStartButton({ fret, to }) {
     }
 
     return (
-        <div className="course-start-button">
+        <div className="play-start-button">
             <Link to={to}>
-                <h2>Start: {fret}</h2>
+                <h2> 🎸Start 🎸</h2>
             </Link>
         </div>
     );
