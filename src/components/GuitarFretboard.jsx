@@ -3,7 +3,7 @@ import MnemonicImage from "./MnemonicImage";
 import { STRINGS } from "../data/strings";
 import { images } from "../data/images";
 import { STRING_TUNINGS } from "../data/notes";
-import { getNoteAtFret } from "../../utils/getNoteAtFret";
+import { getNoteAtFret } from "../utils/getNoteAtFret";
 
 export default function GuitarFretboard({ frets = 12, highlightFret = null }) {
     const fretRefs = useRef([]);

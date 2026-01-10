@@ -9,19 +9,20 @@ export default function Practice() {
 
     // Convert to number safely
     // const sentenceFret = parseInt(sentenceId, 10);
+    console.log(sentenceId)
+    // if (!mnemonicsByFret[sentenceId]) {
+    //     return <div>Fret data not found</div>;
+    // }
 
-    if (!mnemonicsByFret[sentenceId]) {
-        return <div>Fret data not found</div>;
-    }
-
-    const sentence = mnemonicsByFret[sentenceId].join(" ");
-    console.log(sentence)
+    // const sentence = mnemonicsByFret[sentenceId].join(" ");
+    // console.log(sentence)
     return (
         <div>
 
             <Navbar />
             {/* <GuitarFretboard /> */}
-            <QuizSentenceGame sentence={sentence} />
+            {/* <QuizSentenceGame sentence={sentence} /> */}
+            <QuizSentenceGame fret={sentenceId} />
         </div>
     )
 }

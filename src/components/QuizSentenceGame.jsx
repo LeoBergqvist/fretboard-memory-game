@@ -1,72 +1,81 @@
-import React, { useEffect, useState } from "react";
-import { shuffleArray } from "../../utils/shuffleArray";
-import WordList from "./WordList";
+import { useState } from "react";
+import OrderQuiz from "./orderQuiz";
+// import { mnemonicsByFret } from "../data/mnemonicsByFret";
+import { mnemonicsByFret } from "../data/mnemonics";
+// import { resolveImage } from "../utils/resolveImage";
+import { resolveImage } from "../utils/resolveImage";
 
-const QuizSentenceGame = ({ sentence }) => {
-    const originalWords = sentence.split(" ");
+export default function QuizSentenceGame({ fret }) {
+    const words = mnemonicsByFret[fret];
+    console.log(words);
+    const [stage, setStage] = useState(0);
+    const [stageComplete, setStageComplete] = useState(false);
 
-    const [availableWords, setAvailableWords] = useState([]);
-    const [answerWords, setAnswerWords] = useState([]);
-    const [isCorrect, setIsCorrect] = useState(null);
+    if (!words) {
+        return <p>No mnemonic found for fret {fret}</p>;
+    }
 
-    useEffect(() => {
-        resetGame();
-    }, [sentence]);
+    const stages = [
+        {
+            title: "Arrange the sentence",
+            tokens: words.map((word, index) => ({
+                id: index,
+                type: "text",
+                value: word,
+            })),
+        },
+        {
+            title: "Arrange using images",
+            tokens: words.map((word, index) => ({
+                id: index,
+                type: "image",
+                value: resolveImage(word),
+                fallback: word,
+            })),
+        },
+        {
+            title: "Arrange using first letters",
+            tokens: words.map((word, index) => ({
+                id: index,
+                type: "letter",
+                value: word[0].toUpperCase(),
+            })),
+        },
+    ];
 
-    const resetGame = () => {
-        setAvailableWords(shuffleArray(originalWords));
-        setAnswerWords([]);
-        setIsCorrect(null);
-    };
+    const currentStage = stages[stage];
 
-    const addWordToAnswer = (word, index) => {
-        setAnswerWords((prev) => [...prev, word]);
-        setAvailableWords((prev) => prev.filter((_, i) => i !== index));
-    };
-
-    const removeWordFromAnswer = (word, index) => {
-        setAnswerWords((prev) => prev.filter((_, i) => i !== index));
-        setAvailableWords((prev) => [...prev, word]);
-    };
-
-    const checkAnswer = () => {
-        setIsCorrect(answerWords.join(" ") === sentence);
+    const goToNextStage = () => {
+        setStage((prev) => prev + 1);
+        setStageComplete(false);
     };
 
     return (
-        <div className="play-quiz-container">
-            <h2 className="quiz-title">Arrange the sentence</h2>
+        <div className="quiz-sentence-game">
+            <h2>{currentStage?.title}</h2>
 
-            <section className="quiz-section">
-                <h4>Your Answer</h4>
-                <WordList
-                    words={answerWords}
-                    variant="answer"
-                    onWordClick={removeWordFromAnswer}
-                />
-            </section>
+            {currentStage ? (
+                <>
+                    <OrderQuiz
+                        tokens={currentStage.tokens}
+                        onCorrect={() => setStageComplete(true)}
+                    />
 
-            <section className="quiz-section">
-                <h4>Words to Pick</h4>
-                <WordList
-                    words={availableWords}
-                    variant="pool"
-                    onWordClick={addWordToAnswer}
-                />
-            </section>
-
-            <div className="quiz-actions">
-                <button onClick={checkAnswer}>Check Answer</button>
-                <button onClick={resetGame}>Reset</button>
-            </div>
-
-            {isCorrect !== null && (
-                <div className={`quiz-result ${isCorrect ? "correct" : "incorrect"}`}>
-                    {isCorrect ? "✅ Correct!" : "❌ Try Again!"}
+                    {stageComplete && (
+                        <button
+                            className="next-stage-button"
+                            onClick={goToNextStage}
+                        >
+                            Next →
+                        </button>
+                    )}
+                </>
+            ) : (
+                <div className="quiz-complete">
+                    <h3>🎉 All stages complete!</h3>
+                    <p>Great job.</p>
                 </div>
             )}
         </div>
     );
-};
-
-export default QuizSentenceGame;
+}

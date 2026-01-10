@@ -16,11 +16,11 @@ export default function CourseLevels() {
                     title={level.title}
                     to={level.route}
                     active={activeRoute === level.route}
-                    setActiveRoute={setActiveRoute}
-                    setActiveFret={setActiveFret}
+                // setActiveRoute={setActiveRoute}
+                // setActiveFret={setActiveFret}
                 />
             ))}
-            <CourseStartButton fret={activeFret} to={activeRoute} />
+            {/* <CourseStartButton fret={activeFret} to={activeRoute} /> */}
 
         </div>
     );

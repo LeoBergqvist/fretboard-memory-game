@@ -1,7 +1,7 @@
 import { imagesStories } from "../data/images";
 
-export default function StoryImage({ index, alt = "", style }) {
-    const src = imagesStories[index];
+export default function StoryImage({ level, alt = "", style }) {
+    const src = imagesStories[level];
 
     // if (!src) return null;
 

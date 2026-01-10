@@ -4,23 +4,25 @@ export default function LevelButton({
     title,
     to,
     active,
-    setActiveRoute,
-    setActiveFret
+    // setActiveRoute,
+    // setActiveFret
 }) {
-    const handleClick = (e) => {
-        if (!active) {
-            e.preventDefault();     // first click: select only
-            setActiveRoute(to);     // ✅ this enables Start button
-            setActiveFret(title);
-        }
+    // const handleClick = (e) => {
+    //     if (!active) {
+    //         e.preventDefault();     // first click: select only
+    //         // setActiveRoute(to);     // ✅ this enables Start button
+    //         // setActiveFret(title);
+    //     }
 
-    };
+    // };
 
     return (
         <div className={`course-level-button ${active ? "active" : ""}`}>
-            <Link to={to} onClick={handleClick}>
+            {/* <Link to={to} onClick={handleClick}> */}
+            <Link to={to}>
                 <h2>{title}</h2>
             </Link>
         </div>
     );
-}
+    // }
+};

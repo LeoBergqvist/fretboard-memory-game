@@ -9,13 +9,17 @@ export default function MnemonicDescription({
     description,
     index,
     lengthIndex,
+    level,
     onNext,
     onBack,
 }) {
     const IndexesImageActive = [5];
-    const level = 0;
-    const levelPractice = levelsPractice[level]
-    console.log(levelPractice)
+    // const level = level;
+    const levelPractice = levelsPractice[level];
+
+    // console.log(levelPractice);
+    console.log(index);
+    // console.log(level);
     return (
         <div className="mnemonic-container-description">
             {headline && <h1>{headline}</h1>}
@@ -30,8 +34,8 @@ export default function MnemonicDescription({
             </p>
 
             <StoryImage
-                index={level}
-                alt="Fretboard story"
+                level={level}
+                alt="Fretboard story image"
                 style={{
                     display: IndexesImageActive.includes(index) ? "block" : "none",
                 }}

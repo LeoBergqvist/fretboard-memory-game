@@ -1,6 +1,7 @@
 import eddy from "../assets/images/eddy.png"
 import dynamite from "../assets/images/dynamite.jpg"
 import fret0Story from "../assets/images/fret0.avif"
+import fret3Story from "../assets/images/fret3.avif"
 
 export const images = {
     0: [eddy, dynamite, fret0Story],
@@ -12,6 +13,7 @@ export const imagesFrets = {
 };
 
 export const imagesStories = {
-    0: [fret0Story,]
+    0: [fret0Story],
+    3: [fret3Story]
 }
 

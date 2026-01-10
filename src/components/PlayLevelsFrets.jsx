@@ -10,14 +10,14 @@ export default function PlayLevelsFrets() {
 
     return (
         <div className="course-levels">
-            {levelsPractice.map((level) => (
+            {Object.values(levelsPractice).map((level) => (
                 <LevelButton
-                    key={level.title}
+                    key={level.fret}
                     title={level.title}
                     to={level.route}
                     active={activeRoute === level.route}
                     setActiveRoute={setActiveRoute}
-                    setActiveFret={setActiveFret}
+                    setActiveFret={() => setActiveFret(level.fret)}
                 />
             ))}
             <CourseStartButton fret={activeFret} to={activeRoute} />

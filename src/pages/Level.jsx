@@ -47,6 +47,7 @@ export default function Level() {
                     lengthIndex={texts.length}
                     onNext={next}
                     onBack={back}
+                    level={level}
                 />
                 {/* <MnemonicImage image={image} /> */}
                 {

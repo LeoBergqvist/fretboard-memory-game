@@ -1,4 +1,4 @@
-import { CHROMATIC_SCALE } from "../src/data/notes";
+import { CHROMATIC_SCALE } from "../data/notes";
 
 export function getNoteAtFret(openNote, fret) {
     const openIndex = CHROMATIC_SCALE.indexOf(openNote);
