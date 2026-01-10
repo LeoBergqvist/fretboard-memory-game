@@ -3,6 +3,7 @@ import { imagesStories } from "../data/images";
 import StoryImage from "../components/StoryImage";
 import PlayStartButton from "./PlayStartButton";
 import { levelsPractice } from "../data/levels"
+import GuitarFretboard from "../components/GuitarFretboard";
 
 export default function MnemonicDescription({
     headline,
@@ -16,6 +17,7 @@ export default function MnemonicDescription({
     const IndexesImageActive = [5];
     // const level = level;
     const levelPractice = levelsPractice[level];
+    const IndexesFretboardActive = [2, 4,];
 
     // console.log(levelPractice);
     console.log(index);
@@ -40,6 +42,10 @@ export default function MnemonicDescription({
                     display: IndexesImageActive.includes(index) ? "block" : "none",
                 }}
             />
+
+            {
+                IndexesFretboardActive.includes(index) && (<GuitarFretboard frets={level + 3} highlightFret={level} />)
+            }
             {
 
                 index === lengthIndex - 1 && (

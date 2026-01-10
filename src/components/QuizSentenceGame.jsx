@@ -1,15 +1,15 @@
 import { useState } from "react";
 import OrderQuiz from "./orderQuiz";
-// import { mnemonicsByFret } from "../data/mnemonicsByFret";
+import ProgressBar from "./ProgressBar";
 import { mnemonicsByFret } from "../data/mnemonics";
-// import { resolveImage } from "../utils/resolveImage";
 import { resolveImage } from "../utils/resolveImage";
 
 export default function QuizSentenceGame({ fret }) {
     const words = mnemonicsByFret[fret];
-    console.log(words);
+
     const [stage, setStage] = useState(0);
     const [stageComplete, setStageComplete] = useState(false);
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
     if (!words) {
         return <p>No mnemonic found for fret {fret}</p>;
@@ -43,27 +43,39 @@ export default function QuizSentenceGame({ fret }) {
         },
     ];
 
-    const currentStage = stages[stage];
-
     const goToNextStage = () => {
-        setStage((prev) => prev + 1);
-        setStageComplete(false);
+        setIsTransitioning(true);
+
+        setTimeout(() => {
+            setStage((prev) => prev + 1);
+            setStageComplete(false);
+            setIsTransitioning(false);
+        }, 300); // must match CSS duration
     };
+
+    const currentStage = stages[stage];
 
     return (
         <div className="quiz-sentence-game">
-            <h2>{currentStage?.title}</h2>
-
             {currentStage ? (
                 <>
-                    <OrderQuiz
-                        tokens={currentStage.tokens}
-                        onCorrect={() => setStageComplete(true)}
-                    />
+                    <ProgressBar current={stage} total={stages.length} />
+
+                    <h2 className={`stage-title ${isTransitioning ? "fade-out" : "fade-in"}`}>
+                        {currentStage.title}
+                    </h2>
+
+                    <div className={`stage-content ${isTransitioning ? "fade-out" : "fade-in"}`}>
+                        <OrderQuiz
+                            quizId={stage}
+                            tokens={currentStage.tokens}
+                            onCorrect={() => setStageComplete(true)}
+                        />
+                    </div>
 
                     {stageComplete && (
                         <button
-                            className="next-stage-button"
+                            className="navigation-button"
                             onClick={goToNextStage}
                         >
                             Next →
@@ -71,7 +83,7 @@ export default function QuizSentenceGame({ fret }) {
                     )}
                 </>
             ) : (
-                <div className="quiz-complete">
+                <div className="quiz-complete fade-in">
                     <h3>🎉 All stages complete!</h3>
                     <p>Great job.</p>
                 </div>

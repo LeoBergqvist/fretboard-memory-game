@@ -1,8 +1,15 @@
 // components/QuizToken.jsx
 export default function QuizToken({ token, onClick }) {
+    const isTextToken = token.type === "text" || token.type === "letter";
+
+
     return (
         <div className="quiz-token" onClick={onClick}>
-            {token.type === "text" && (
+            {
+            /* {token.type === "text" && (
+                <span className="quiz-token-text">{token.value}</span>
+            )} */}
+            {isTextToken && (
                 <span className="quiz-token-text">{token.value}</span>
             )}
 

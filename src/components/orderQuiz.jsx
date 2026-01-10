@@ -2,20 +2,26 @@ import { useEffect, useState } from "react";
 import { shuffleArray } from "../utils/shuffleArray";
 import QuizToken from "./QuizToken";
 
-export default function OrderQuiz({ tokens, onCorrect }) {
+
+export default function OrderQuiz({ tokens, quizId, onCorrect }) {
     const [available, setAvailable] = useState([]);
     const [answer, setAnswer] = useState([]);
     const [isCorrect, setIsCorrect] = useState(null);
 
+
     useEffect(() => {
-        reset();
-    }, [tokens]);
+        setAvailable(shuffleArray(tokens));
+        setAnswer([]);
+        setIsCorrect(null);
+    }, [quizId]); // 👈 NOT tokens
 
     const reset = () => {
         setAvailable(shuffleArray(tokens));
         setAnswer([]);
         setIsCorrect(null);
     };
+
+
 
     const addToken = (token, index) => {
         setAnswer((prev) => [...prev, token]);
@@ -67,7 +73,7 @@ export default function OrderQuiz({ tokens, onCorrect }) {
                 </div>
             </section>
 
-            <button onClick={check}>Check</button>
+            <button className="navigation-button" onClick={check}>Check</button>
 
             {isCorrect !== null && (
                 <p className={isCorrect ? "correct" : "incorrect"}>

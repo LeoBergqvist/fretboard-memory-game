@@ -5,8 +5,8 @@ import { levelsPractice } from "../data/levels"
 
 
 export default function PlayLevelsFrets() {
-    const [activeRoute, setActiveRoute] = useState(null);
-    const [activeFret, setActiveFret] = useState(null);
+    // const [activeRoute, setActiveRoute] = useState(null);
+    // const [activeFret, setActiveFret] = useState(null);
 
     return (
         <div className="course-levels">
@@ -15,12 +15,12 @@ export default function PlayLevelsFrets() {
                     key={level.fret}
                     title={level.title}
                     to={level.route}
-                    active={activeRoute === level.route}
-                    setActiveRoute={setActiveRoute}
-                    setActiveFret={() => setActiveFret(level.fret)}
+                // active={activeRoute === level.route}
+                // setActiveRoute={setActiveRoute}
+                // setActiveFret={() => setActiveFret(level.fret)}
                 />
             ))}
-            <CourseStartButton fret={activeFret} to={activeRoute} />
+            {/* <CourseStartButton fret={activeFret} to={activeRoute} /> */}
 
         </div>
     );

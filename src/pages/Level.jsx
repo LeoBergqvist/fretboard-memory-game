@@ -50,9 +50,7 @@ export default function Level() {
                     level={level}
                 />
                 {/* <MnemonicImage image={image} /> */}
-                {
-                    IndexesFretboardActive.includes(index) && (<GuitarFretboard frets={level + 3} highlightFret={level} />)
-                }
+                {/* {                    IndexesFretboardActive.includes(index) && (<GuitarFretboard frets={level + 3} highlightFret={level} />)                }  */}
                 {
 
                     // IndexesImageActive.includes(index) && (
