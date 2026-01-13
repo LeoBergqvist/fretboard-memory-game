@@ -15,14 +15,17 @@ export default function LevelButton({
     //     }
 
     // };
+    const baseClass = to?.includes("play")
+        ? "play-level-button"
+        : "course-level-button";
 
+
+    {/* <Link to={to} onClick={handleClick}> */ }
     return (
-        <div className={`course-level-button ${active ? "active" : ""}`}>
-            {/* <Link to={to} onClick={handleClick}> */}
+        <div className={`${baseClass} ${active ? "active" : ""}`}>
             <Link to={to}>
-                <h2>{title}</h2>
+                {title}
             </Link>
         </div>
     );
-    // }
 };

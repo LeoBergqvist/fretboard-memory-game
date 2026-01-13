@@ -9,7 +9,7 @@ export default function Practice() {
 
     // Convert to number safely
     // const sentenceFret = parseInt(sentenceId, 10);
-    console.log(sentenceId)
+    // console.log(sentenceId)
     // if (!mnemonicsByFret[sentenceId]) {
     //     return <div>Fret data not found</div>;
     // }

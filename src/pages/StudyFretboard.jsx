@@ -16,9 +16,6 @@ export default function StudyFretboard() {
                     description={"Learn mnemonics to remember the notes on each string at frets 0, 3, 5, 7, and 10."} />
                 <CourseLevels />
             </div>
-            {/* <div className="course-container">
-                <CourseDescription headline={"Last attempts:"} description={"Score / Date"} />
-            </div> */}
         </>
     )
 }

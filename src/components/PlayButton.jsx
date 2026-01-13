@@ -6,10 +6,12 @@ export default function PlayButton({ title, to }) {
     return (
         <div className={`play-button ${isDisabled ? "disabled" : ""}`}>
             {isDisabled ? (
-                <h1>{title}</h1> // render as plain text when disabled
+                <div>
+                    {title}
+                </div>
             ) : (
                 <Link to={to}>
-                    <h1>{title}</h1>
+                    {title}
                 </Link>
             )}
         </div>

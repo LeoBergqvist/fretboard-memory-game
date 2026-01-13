@@ -6,10 +6,12 @@ export default function CourseButton({ title, to }) {
     return (
         <div className={`course-button ${isDisabled ? "disabled" : ""}`}>
             {isDisabled ? (
-                <h1>{title}</h1> // render as plain text when disabled
+                <div>
+                    {title}
+                </div>
             ) : (
                 <Link to={to}>
-                    <h1>{title}</h1>
+                    {title}
                 </Link>
             )}
         </div>

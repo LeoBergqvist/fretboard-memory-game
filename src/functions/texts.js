@@ -10,6 +10,6 @@ ${fretNotes} \n (lowest- to highest string)`,
         ${mnemonics}`,
         `This creates a story. If we create visuals 
         for it too, our brains remember more easily:`,
-        `Now we are gonna practice this sentence`,
+        `Now we are gonna practice this sentence 🎸:`,
     ];
 }

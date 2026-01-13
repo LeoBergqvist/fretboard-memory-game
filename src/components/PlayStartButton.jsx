@@ -4,7 +4,7 @@ export default function PlayStartButton({ to }) {
     if (!to) {
         return (
             <div className="course-start-button disabled">
-                <h2>Start</h2>
+                Start
             </div>
         );
     }
@@ -12,7 +12,7 @@ export default function PlayStartButton({ to }) {
     return (
         <div className="play-start-button">
             <Link to={to}>
-                <h2> 🎸Start 🎸</h2>
+                Click to start practicing
             </Link>
         </div>
     );
