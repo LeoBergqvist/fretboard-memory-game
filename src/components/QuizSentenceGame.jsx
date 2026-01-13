@@ -1,6 +1,6 @@
 import { useState } from "react";
 import OrderQuiz from "./orderQuiz";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "./Progressbar";
 import { mnemonicsByFret } from "../data/mnemonics";
 import { resolveImage } from "../utils/resolveImage";
 

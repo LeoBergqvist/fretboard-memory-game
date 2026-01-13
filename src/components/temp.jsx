@@ -1,6 +1,6 @@
 export default function ProgressBar({ current, total }) {
     const percentage = ((current + 1) / total) * 100;
-
+    const qt = "me"
     return (
         <div className="progress-container">
             <div className="progress-header">
