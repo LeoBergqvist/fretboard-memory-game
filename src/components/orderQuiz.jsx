@@ -72,14 +72,18 @@ export default function OrderQuiz({ tokens, quizId, onCorrect }) {
                     ))}
                 </div>
             </section>
+            <div>
+                {isCorrect !== null && (
+                    <p className={isCorrect ? "correct" : "incorrect"}>
+                        {isCorrect ? "✅ Correct!" : "❌ Try again"}
+                    </p>
+                )}
 
-            <button className="navigation-button" onClick={check}>Check</button>
+                <button className="navigation-button" onClick={check}>Check</button>
+            </div>
 
-            {isCorrect !== null && (
-                <p className={isCorrect ? "correct" : "incorrect"}>
-                    {isCorrect ? "✅ Correct!" : "❌ Try again"}
-                </p>
-            )}
+
+
         </div>
     );
 }

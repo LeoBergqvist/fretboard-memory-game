@@ -86,6 +86,10 @@ export default function QuizSentenceGame({ fret }) {
                 <div className="quiz-complete fade-in">
                     <h3>🎉 All stages complete!</h3>
                     <p>Great job.</p>
+                    <div>
+                        <a href="/study/">Go back to study</a>
+                        <a href="/play/">Go back to practice</a>
+                    </div>
                 </div>
             )}
         </div>
