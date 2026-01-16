@@ -14,7 +14,7 @@ export default function PlayFretboard() {
             <div className="course-container">
                 <CourseDescription
                     headline={"Description:"}
-                    description={"Practice mnemonics to remember the notes on each string at frets 0, 3, 5, 7, and 10."} />
+                    description={"Practice the notes on the fretboard using memory tricks (mnemonics) to remember the notes on each string vertically. \n\n You will complete three stages for each fret"} />
                 {/* <CourseLevels /> */}
                 <PlayLevelsFrets />
             </div>

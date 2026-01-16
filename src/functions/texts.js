@@ -8,8 +8,7 @@ ${fretNotes} \n (lowest- to highest string)`,
         `For the notes (${fretNotes}) \n  
         We make the sentence: \n
         ${mnemonics}`,
-        `This creates a story. If we create visuals 
-        for it too, our brains remember more easily:`,
-        `Now we are gonna practice this sentence 🎸:`,
+        `This creates a story. If we create visuals for it too, our brains remember more easily:`,
+        `Now let's practice this sentence 🎸:`,
     ];
 }

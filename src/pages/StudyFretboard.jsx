@@ -13,7 +13,9 @@ export default function StudyFretboard() {
             <div className="course-container">
                 <CourseDescription
                     headline={"Description:"}
-                    description={"Learn mnemonics to remember the notes on each string at frets 0, 3, 5, 7, and 10."} />
+                    description={
+                        "In these lessons we begin to learn the notes on the fretboard using memory tricks (mnemonics) to remember the notes on each string \n\n We will look at how we can use words and images to remember more easily"
+                    } />
                 <CourseLevels />
             </div>
         </>

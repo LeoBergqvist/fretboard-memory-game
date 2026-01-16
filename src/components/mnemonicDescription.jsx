@@ -65,8 +65,8 @@ export default function MnemonicDescription({
 
 
 
-                <p>{index + 1} / {lengthIndex}</p>
             </div>
+            <p>{index + 1} / {lengthIndex}</p>
 
 
         </div>

@@ -22,7 +22,9 @@ export default function Practice() {
             <Navbar />
             {/* <GuitarFretboard /> */}
             {/* <QuizSentenceGame sentence={sentence} /> */}
-            <QuizSentenceGame fret={sentenceId} />
+            <div className="practice-container">
+                <QuizSentenceGame fret={sentenceId} />
+            </div>
         </div>
     )
 }
