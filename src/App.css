@@ -1,3 +1,5 @@
+/* || VARIABLES AND ROOT */
+
 #root {
   margin: 0 auto;
   --color-primary: #4389C1;
@@ -12,46 +14,7 @@
   --color-text-secondary: #000000;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-
+/* || SITEWIDE COMPONENTS (Navbar) */
 
 .navbar {
   display: flex;
@@ -117,26 +80,63 @@
 }
 
 
-/* Mobile styles */
-@media (max-width: 600px) {
-  .navbar {
-    justify-content: center;
-  }
 
-  .guitar-img {
-    display: none;
-    /* height: 48px;
-    width: 48px; */
-  }
+/* || UTILITIES & SHARED BUTTONS */
 
-  .nav-links {
-    width: 100%;
-    justify-content: space-around;
-  }
+button {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
 
+  background-color: #2563eb;
+  color: white;
+
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+  background-color: #1e4fd1;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 
+.navigation-button {
+  padding: 0.5rem 1rem;
+  min-width: 90px;
+  display: block;
+  margin: 1rem auto 0;
+
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+
+  background-color: var(--color-course);
+  color: var(--color-text-secondary);
+  box-shadow: 2px 2px 2px var(--color-primary);
+
+  border-radius: 0.5rem;
+}
+
+.navigation-button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+
+.navigation-button:disabled {
+  background: grey;
+  box-shadow: 1px 1px 1px var(--color-primary);
+  color: black;
+  opacity: 0.6;
+}
+
+
+
+/* || WELCOME & COURSE SELECTION */
 .welcome {
   /* margin-left: 12px; */
   margin-left: 15%;
@@ -159,8 +159,6 @@
 
   justify-content: center;
 }
-
-
 
 .course-button {
   flex: 1 1 280px;
@@ -187,16 +185,7 @@
   font-size: clamp(3.1rem, 2.5vw, 1.8rem);
 }
 
-@media (max-width: 480px) {
-  .course-button {
-    aspect-ratio: 3 / 2;
-  }
 
-  /* .course-button a {
-    font-size: 1.1rem;
-    padding: 0.5rem;
-  } */
-}
 
 
 .course-button.disabled {
@@ -235,11 +224,6 @@
   margin-inline: auto;
 }
 
-@media (max-width: 768px) {
-  .course-container {
-    flex-direction: column;
-  }
-}
 
 
 .course-container-description {
@@ -299,34 +283,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.navigation-button {
-  padding: 0.5rem 1rem;
-  min-width: 90px;
-  display: block;
-  margin: 1rem auto 0;
-
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-
-  background-color: var(--color-course);
-  color: var(--color-text-secondary);
-  box-shadow: 2px 2px 2px var(--color-primary);
-
-  border-radius: 0.5rem;
-}
-
-.navigation-button:hover {
-  background-color: var(--color-primary);
-  color: var(--color-text-primary);
-}
-
-
-.navigation-button:disabled {
-  background: grey;
-  box-shadow: 1px 1px 1px var(--color-primary);
-  color: black;
-  opacity: 0.6;
 }
 
 .course-start-button {
@@ -400,17 +356,17 @@
   color: var(--color-bg);
 }
 
-/* GuitarFretboard.css */
+.story-name {
+  height: 650px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+  color: red;
+}
 
-
+/* || GUITAR FRETBOARD COMPONENT */
 .fretboard-wrapper {
-  /* width: 100%; */
   overflow-x: auto;
   display: flex;
-  /* justify-content: center; */
-  /* horizontal */
-  /* align-items: center; */
-  /* vertical */
 }
 
 
@@ -509,14 +465,11 @@
 }
 
 .fret.highlight .string-line {
-  /* background: #fff; */
   background: var(--color-primary);
-  /* height: 3px; */
 }
 
 .MnemonicImage {
   position: absolute;
-  /* REQUIRED */
   z-index: 10;
   /* Higher than string-line */
   height: 20px;
@@ -532,6 +485,7 @@
   border: 2px solid var(--color-primary)
 }
 
+/* || Future Grouping COMPONENT */
 .note-button {
   border-radius: 8px;
   text-align: center;
@@ -541,12 +495,8 @@
   margin-top: 5px;
 }
 
-.story-name {
-  height: 650px;
-  padding-bottom: 15px;
-  padding-right: 10px;
-  color: red;
-}
+
+/* || QUIZ & GAMES */
 
 .play-level-button {
   background: var(--color-accent);
@@ -625,16 +575,6 @@
 
 }
 
-/* 
-.play-quiz-container span {
-  display: inline-block;
-  margin: 5px;
-  padding: 5px 10px;
-  border: 1px solid rgb(85, 85, 85);
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: rgb(240, 240, 240);
-} */
 
 .play-quiz-container {
   padding: 20px;
@@ -665,12 +605,10 @@
 
 .word-chip--answer {
   border: 1px solid #333;
-  /* background-color: #e8f0ff; */
 }
 
 .word-chip--pool {
   border: 1px solid #666;
-  /* background-color: #f3f3f3; */
 }
 
 .word-chip:hover {
@@ -692,8 +630,6 @@
   background: #0003;
   width: fit-content;
   padding: 1rem;
-  /* border: solid #0000003d; */
-  /* align-content: center; */
 }
 
 .quiz-result.incorrect {
@@ -731,16 +667,7 @@
   font-size: clamp(3.1rem, 2.5vw, 1.8rem);
 }
 
-@media (max-width: 480px) {
-  .play-button {
-    aspect-ratio: 3 / 2;
-  }
 
-  /* .play-button a {
-    font-size: 1.1rem;
-    padding: 0.5rem;
-  } */
-}
 
 .play-button.disabled {
   background-color: #b5c9e0;
@@ -846,27 +773,6 @@
 }
 
 
-button {
-  padding: 8px 14px;
-  font-size: 0.95rem;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-
-  background-color: #2563eb;
-  color: white;
-
-  transition: background-color 0.15s ease, opacity 0.15s ease;
-}
-
-button:hover {
-  background-color: #1e4fd1;
-}
-
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
 
 .correct {
   color: var(--color-course);
@@ -1018,5 +924,47 @@ button:disabled {
   margin-inline: auto;
   margin-top: 2rem;
   overflow-wrap: break-word;
+
+}
+
+/* || MEDIA QUERIES (Mobile Adjustments) */
+
+@media (max-width: 480px) {
+  .play-button {
+    aspect-ratio: 3 / 2;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .course-container {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .course-button {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .guitar-img {
+    display: none;
+    /* height: 48px;
+    width: 48px; */
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+  }
 
 }
