@@ -7,8 +7,8 @@ import { normalizeWord } from "./normalizeWord";
 // import { imageRegistry } from "../src/data/imageRegistry";
 // import { normalizeWord } from "./normalizeWord";
 
-export function resolveImage(word) {
+export function resolveImage(fret, word) {
   const key = normalizeWord(word);
 
-  return imageRegistry[key] ?? null;
+  return imageRegistry[fret][key] ?? null;
 }

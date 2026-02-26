@@ -29,17 +29,31 @@ export default function QuizSentenceGame({ fret }) {
             tokens: words.map((word, index) => ({
                 id: index,
                 type: "image",
-                value: resolveImage(word),
+                value: resolveImage(fret, word),
                 fallback: word,
             })),
         },
         {
             title: "Arrange using first letters",
-            tokens: words.map((word, index) => ({
-                id: index,
-                type: "letter",
-                value: word[0].toUpperCase(),
-            })),
+            tokens: words.map((word, index) => {
+                let letter = word[0].toUpperCase();
+
+                // If first word → add ¹
+                if (index === 0) {
+                    letter += "¹";
+                }
+
+                // If word ends with ")"
+                if (word.endsWith(")")) {
+                    letter += "#";
+                }
+
+                return {
+                    id: index,
+                    type: "letter",
+                    value: letter,
+                }
+            })
         },
     ];
 

@@ -10,7 +10,7 @@ import { getFretNotes } from "../functions/getFretNotes";
 // import { story } from "../assets/images/guitar.png"
 import MnemonicImage from "../components/MnemonicImage";
 // import { imagesFrets } from "../data/images";
-import { imagesStories } from "../data/images";
+// import { imagesStories } from "../data/images";
 import StoryImage from "../components/StoryImage";
 
 

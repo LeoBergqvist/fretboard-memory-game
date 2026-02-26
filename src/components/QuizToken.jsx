@@ -14,11 +14,15 @@ export default function QuizToken({ token, onClick }) {
             )}
 
             {token.type === "image" && (
-                <img
-                    src={token.value}
-                    alt=""
-                    className="quiz-token-image"
-                />
+                <div className="quiz-token-image-container">
+                    <img
+                        src={token.value}
+                        alt=""
+                        className="quiz-token-image"
+                    />
+                    <p className="quiz-token-text-bar"> {token.fallback?.charAt(0).toUpperCase()}...</p>
+                </div>
+
             )}
         </div>
     );

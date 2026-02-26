@@ -109,8 +109,8 @@ button:disabled {
 .navigation-button {
   padding: 0.5rem 1rem;
   min-width: 90px;
-  display: block;
-  margin: 1rem auto 0;
+  /* display: block; */
+  margin: 1rem 0.5rem;
 
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
 
@@ -720,6 +720,14 @@ button:disabled {
   gap: clamp(6px, 2vw, 10px);
   min-height: 48px;
   justify-content: center;
+}
+
+.quiz-token-text-bar {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.403);
+  border-radius: 10px;
+
 }
 
 .quiz-token {

@@ -52,7 +52,7 @@ export default function MnemonicDescription({
                     <PlayStartButton to={levelPractice.route} />
                 )
             }
-            <div>
+            <div >
                 <button className="navigation-button" onClick={onBack} disabled={index === 0}>
                     Back
                 </button>
