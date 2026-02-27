@@ -831,7 +831,7 @@ button:disabled {
   padding: 1rem;
   border-radius: 0.75rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.484);
+  /* background-color: rgba(0, 0, 0, 0.484); */
 
   /* border: 1px solid #bbf7d0; */
 }

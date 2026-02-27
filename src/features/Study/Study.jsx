@@ -1,5 +1,5 @@
-import Courses from "../components/Courses";
-import Navbar from "../components/Navbar";
+import Courses from "./Courses";
+import Navbar from "../../components/shared/Navbar";
 
 export default function Study() {
     return (

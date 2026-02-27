@@ -1,13 +1,14 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Play from "./pages/Play";
-import Study from "./pages/Study";
-import StudyFretboard from "./pages/StudyFretboard";
+// import Home from "./pages/Home";
+import Home from "./Homepage/Home"
+import Play from "./features/Practice/Play";
+import Study from "./features/Study/Study";
+import StudyFretboard from "./features/Study/StudyFretboard";
 import NotFound from "./pages/NotFound";
-import Level from './pages/Level';
-import PlayFretboard from './pages/PlayFretboard';
-import Practice from './pages/Practice';
+import Level from './features/Study/Level';
+import PlayFretboard from './features/Practice/PlayFretboard';
+import Practice from './features/Practice/Practice';
 
 export default function App() {
   return (

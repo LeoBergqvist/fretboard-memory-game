@@ -1,14 +1,19 @@
 import React, { useEffect, useRef } from "react";
-import MnemonicImage from "./MnemonicImage";
-import { STRINGS } from "../data/strings";
-import { images } from "../data/images";
-import { STRING_TUNINGS } from "../data/notes";
-import { getNoteAtFret } from "../utils/getNoteAtFret";
+import { STRINGS } from "../../data/strings";
+import { STRING_TUNINGS } from "../../data/notes";
+import { getNoteAtFret } from "../../utils/getNoteAtFret";
+
+// for possible future use, see comment below over "const image"
+// import { images } from "../../data/images";
 
 export default function GuitarFretboard({ frets = 12, highlightFret = null }) {
     const fretRefs = useRef([]);
 
-    const image = highlightFret != null ? images[highlightFret] : null;
+
+    // image that maps onto fretboard component
+    // if want to map images to fretboard in future implementation
+
+    // const image = highlightFret != null ? images[highlightFret] : null;
 
     useEffect(() => {
         if (highlightFret != null) {

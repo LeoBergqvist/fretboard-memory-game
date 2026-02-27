@@ -1,9 +1,9 @@
 import { StrictMode } from "react"
-import Navbar from "../components/Navbar"
-import WelcomeMessage from "../components/WelcomeMessage"
+import Navbar from "../components/shared/Navbar"
+import WelcomeMessage from "../Homepage/WelcomeMessage"
 import '../index.css'
 import '../App.css'
-import QuizSentenceGame from "../components/QuizSentenceGame"
+
 
 
 function Homepage() {

@@ -1,4 +1,3 @@
-import CourseButton from "./CourseButton";
 import PlayButton from "./PlayButton";
 
 export default function PlayLevels() {

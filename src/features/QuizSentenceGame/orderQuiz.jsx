@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { shuffleArray } from "../utils/shuffleArray";
+import { shuffleArray } from "../../utils/shuffleArray";
 import QuizToken from "./QuizToken";
 
 

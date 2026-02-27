@@ -1,7 +1,6 @@
 import { useState } from "react";
-import LevelButton from "../components/LevelButton";
-import CourseStartButton from "../components/CourseStartButton";
-import { levels } from "../data/levels"
+import LevelButton from "./LevelButton";
+import { levels } from "../../data/levels"
 
 
 export default function CourseLevels() {

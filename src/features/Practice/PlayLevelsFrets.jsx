@@ -1,7 +1,7 @@
-import { useState } from "react";
-import LevelButton from "../components/LevelButton";
-import CourseStartButton from "../components/CourseStartButton";
-import { levelsPractice } from "../data/levels"
+// import { useState } from "react";
+import LevelButton from "../../components/shared/LevelButton";
+// import CourseStartButton from "../../components/shared/CourseStartButton";
+import { levelsPractice } from "../../data/levels"
 
 
 export default function PlayLevelsFrets() {

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import guitarImg from "../assets/images/guitar.png";
+import guitarImg from "../../../src/assets/images/guitar.png";
 
 export default function Navbar() {
     return (

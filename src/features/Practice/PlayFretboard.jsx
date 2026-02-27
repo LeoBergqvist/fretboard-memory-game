@@ -1,11 +1,7 @@
-import CourseButton from "../components/CourseButton";
-import CourseDescription from "../components/CourseDescription";
-import Courses from "../components/Courses";
-import Navbar from "../components/Navbar";
-import CourseStartButton from "../components/CourseStartButton";
-import LevelButton from "../components/LevelButton";
-import CourseLevels from "../components/CourseLevels";
-import PlayLevelsFrets from "../components/PlayLevelsFrets";
+import CourseDescription from "../../components/shared/CourseDescription";
+import Navbar from "../../components/shared/Navbar";
+import CourseLevels from "../../components/shared/CourseLevels";
+import PlayLevelsFrets from "./PlayLevelsFrets";
 
 export default function PlayFretboard() {
     return (

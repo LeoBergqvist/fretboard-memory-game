@@ -1,4 +1,4 @@
-import CourseButton from "./CourseButton";
+import CourseButton from "../../components/shared/CourseButton";
 
 export default function Courses() {
     return (

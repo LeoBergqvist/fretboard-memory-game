@@ -1,9 +1,8 @@
 import React from "react";
-import { imagesStories } from "../data/images";
-import StoryImage from "../components/StoryImage";
-import PlayStartButton from "./PlayStartButton";
-import { levelsPractice } from "../data/levels"
-import GuitarFretboard from "../components/GuitarFretboard";
+import StoryImage from "./StoryImage";
+import PlayStartButton from "../Practice/PlayStartButton";
+import { levelsPractice } from "../../data/levels"
+import GuitarFretboard from "../GuitarFretboard/GuitarFretboard";
 
 export default function MnemonicDescription({
     headline,
@@ -15,13 +14,9 @@ export default function MnemonicDescription({
     onBack,
 }) {
     const IndexesImageActive = [5];
-    // const level = level;
     const levelPractice = levelsPractice[level];
     const IndexesFretboardActive = [2, 4,];
 
-    // console.log(levelPractice);
-    console.log(index);
-    // console.log(level);
     return (
         <div className="mnemonic-container-description">
             {headline && <h1>{headline}</h1>}
@@ -61,14 +56,8 @@ export default function MnemonicDescription({
                     Next
                 </button>
 
-
-
-
-
             </div>
             <p>{index + 1} / {lengthIndex}</p>
-
-
         </div>
     );
 }

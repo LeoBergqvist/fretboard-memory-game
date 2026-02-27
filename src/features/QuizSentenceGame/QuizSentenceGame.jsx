@@ -1,8 +1,8 @@
 import { useState } from "react";
 import OrderQuiz from "./orderQuiz";
 import ProgressBar from "./Progressbar";
-import { mnemonicsByFret } from "../data/mnemonics";
-import { resolveImage } from "../utils/resolveImage";
+import { mnemonicsByFret } from "../../data/mnemonics";
+import { resolveImage } from "../../utils/resolveImage";
 
 export default function QuizSentenceGame({ fret }) {
     const words = mnemonicsByFret[fret];

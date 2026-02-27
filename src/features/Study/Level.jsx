@@ -1,17 +1,10 @@
-import GuitarFretboard from "../components/GuitarFretboard";
-import Navbar from "../components/Navbar";
-import CourseDescription from "../components/CourseDescription";
+import Navbar from "../../components/shared/Navbar";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import MnemonicDescription from "../components/mnemonicDescription";
-import { mnemonicsByFret } from "../data/mnemonics";
-import { getTexts } from '../functions/texts';
-import { getFretNotes } from "../functions/getFretNotes";
-// import { story } from "../assets/images/guitar.png"
-import MnemonicImage from "../components/MnemonicImage";
-// import { imagesFrets } from "../data/images";
-// import { imagesStories } from "../data/images";
-import StoryImage from "../components/StoryImage";
+import MnemonicDescription from "./mnemonicDescription";
+import { mnemonicsByFret } from "../../data/mnemonics";
+import { getTexts } from '../../functions/texts';
+import { getFretNotes } from "../../functions/getFretNotes";
 
 
 export default function Level() {
@@ -19,7 +12,7 @@ export default function Level() {
     const level = Number(levelId);
     const IndexesFretboardActive = [2, 3, 4,];
     const IndexesImageActive = [4, 5]
-    // const image = imagesFrets[0];
+
 
     const fretNotes = getFretNotes(level).join(", ");
     const mnemonics = mnemonicsByFret[level]
@@ -49,17 +42,6 @@ export default function Level() {
                     onBack={back}
                     level={level}
                 />
-                {/* <MnemonicImage image={image} /> */}
-                {/* {                    IndexesFretboardActive.includes(index) && (<GuitarFretboard frets={level + 3} highlightFret={level} />)                }  */}
-                {
-
-                    // IndexesImageActive.includes(index) && (
-                    //     <StoryImage index={level} alt="Fretboard story" />
-                    // )
-
-
-                }
-
 
             </div>
         </>
