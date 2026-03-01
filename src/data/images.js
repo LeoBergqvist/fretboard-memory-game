@@ -1,5 +1,5 @@
-import eddy from "../assets/images/fret0/eddy.png"
-import dynamite from "../assets/images/fret0/dynamite.jpg"
+import eddy from "../assets/images/fret0/eddy.avif";
+import dynamite from "../assets/images/fret0/dynamite.avif";
 import fret0Story from "../assets/images/fret0/fret0.avif"
 import fret1Story from "../assets/images/fret1/fret1.avif"
 import fret3Story from "../assets/images/fret3/fret3.avif"
