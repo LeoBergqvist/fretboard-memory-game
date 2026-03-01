@@ -51,7 +51,7 @@ export const mnemonicsByFret = {
         "dark",
         "guitar",
         "cases",
-        "for",
+        "forever",
         "avoiding",
         "dust",
     ],

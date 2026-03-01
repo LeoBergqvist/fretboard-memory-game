@@ -3,7 +3,7 @@ import Navbar from "../../components/shared/Navbar";
 import QuizSentenceGame from "../QuizSentenceGame/QuizSentenceGame";
 
 
-export default function Practice() {
+export default function QuizContainer() {
     const { sentenceId } = useParams();
 
     return (

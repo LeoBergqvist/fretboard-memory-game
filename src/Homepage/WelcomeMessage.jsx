@@ -1,7 +1,7 @@
 export default function WelcomeMessage() {
     return (
         <section className="welcome">
-            <h1>Fretboard Trainer 🎸</h1>
+            <h1>FRETBOARD TRAINER 🎸</h1>
             <h2>Learn the notes on the guitar fretboard step by step.</h2>
 
             <p>
