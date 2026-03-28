@@ -37,7 +37,7 @@ import beautiful from "../assets/images/fret7/beautiful.avif"
 import elephants from "../assets/images/fret7/elephants.avif"
 import always from "../assets/images/fret7/always.avif"
 import decorate from "../assets/images/fret7/decorate.avif"
-import guesthouses from "../assets/images/fret7/guesthouse.avif"
+import flat from "../assets/images/fret7/flat.avif"
 import beautifulExclamation from "../assets/images/fret7/beautifully.avif"
 
 
@@ -92,7 +92,7 @@ export const imageRegistry = {
         "elephants": elephants,
         "always": always,
         "decorate": decorate,
-        "guesthouse's sharply(#),": guesthouses,
+        "flats sharply(#),": flat,
         "beautiful!": beautifulExclamation,
 
     },

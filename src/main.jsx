@@ -14,12 +14,3 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>
 );
 
-// <StrictMode>
-//   <Navbar />
-//   <Courses />
-//   <WelcomeMessage
-//     title="Welcome to the Dashboard"
-//   />
-//   <Button />
-// </StrictMode>,
-

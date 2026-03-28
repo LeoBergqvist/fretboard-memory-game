@@ -36,7 +36,7 @@ export const mnemonicsByFret = {
         "elephants",
         "always",
         "decorate",
-        "guesthouse's sharply(#),",
+        "flats sharply(#),",
         "beautiful!",
     ],
     9: [

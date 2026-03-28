@@ -8,7 +8,6 @@ export default function PlayLevels() {
                 to="/play/fretboard"
             />
 
-
             <PlayButton
                 title="Groupings"
                 to=""
