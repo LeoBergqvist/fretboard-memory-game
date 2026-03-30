@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 // import Home from "./pages/Home";
 import Home from "./Homepage/Home"
 import Play from "./features/Practice/Play";
+import Login from './pages/Login';
 import Study from "./features/Study/Study";
 import StudyFretboard from "./features/Study/StudyFretboard";
 import NotFound from "./pages/NotFound";
@@ -15,6 +16,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/play" element={<Play />} />
         <Route path="/study" element={<Study />} />
         <Route path="/study/fretboard" element={<StudyFretboard />} />
