@@ -13,7 +13,7 @@ function Homepage() {
         <>
             <StrictMode>
                 <Navbar />
-                <QuizDashboard />
+                {/* <QuizDashboard /> */}
                 <WelcomeMessage />
                 {/* <QuizAuth /> */}
             </StrictMode>
